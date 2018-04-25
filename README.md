@@ -1,5 +1,5 @@
 # WITP
-Where In The Planet App - Learning languages
+Where In The Planet App - Languages
 
 Migrating it to Angular 5
 
