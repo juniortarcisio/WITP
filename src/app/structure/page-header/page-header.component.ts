@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SessionService } from '../../shared/services/session.service';
+import { LanguagesService } from '../../shared/services/languages.service';
+import { SpeechService } from '../../shared/services/speech.service';
 
 @Component({
   selector: 'page-header',
@@ -8,12 +10,16 @@ import { SessionService } from '../../shared/services/session.service';
 })
 export class PageHeaderComponent implements OnInit {
 
-  language:any;
+  languagex:any;
 
-  constructor(private ss:SessionService) { }
+  constructor(
+    private ss:SessionService, 
+    private languageService:LanguagesService,
+    private speechService:SpeechService
+  ) { }
 
   ngOnInit() {
-    this.ss.currentLanguage.subscribe(language => this.language = language)
+    this.ss.currentLanguage.subscribe(language => this.languagex = language)
   }
 
 }

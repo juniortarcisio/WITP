@@ -7,41 +7,41 @@
     <span class="nav-subtitle">Where in The Planet <i class="fa fa-globe"></i></span>
   </span>
   <div class="top-nav-item top-nav-flags top-nav-lang">
-    <img  alt="Your language" title="Your language">
+    <img  alt="Your language" title="Your language" [src]="languageService.from.flag">
     <span class="flag-label hide-on-mobile">From</span>
     <div class="card pop-lang-from grow-down-left">
         <div class="gb_rb"></div>
         <div class="gb_qb"></div>
         <h5>Your Language</h5>
-        <div class="pop-lang-flags effect-waves waves-blue">
-            <img width="20" />
-            <span></span>
+        <div class="pop-lang-flags effect-waves waves-blue" *ngFor="let language of languageService.languages" (click)="languageService.changeFrom(language)">
+            <img width="20" [src]="language.flag" />
+            <span>{{language.name}}</span>
         </div>
     </div>
   </div>
   <div class="top-nav-item top-nav-flags">
-    <i class="fa fa-retweet cursor-pointer" title="Invert languages"></i>
+    <i class="fa fa-retweet cursor-pointer" title="Invert languages" (click)="languageService.swapLanguages()"></i>
     <div [hidden]="true" class="lang-help">
         <i class="fa fa-arrow-up"></i>
         <span>Choose your language settings here</span>
     </div>
   </div>
   <div class="top-nav-item top-nav-flags top-nav-lang">
-    <img alt="Learning language" title="Learning language">
+    <img alt="Learning language" title="Learning language" [src]="languageService.learning.flag">
     <span class="flag-label hide-on-mobile">Learn</span>
     <div class="card pop-lang-from grow-down-left">
         <div class="gb_rb"></div>
         <div class="gb_qb"></div>
         <h5>Learning</h5>
-        <div class="pop-lang-flags effect-waves waves-blue">
-            <img width="20" />
-            <span></span>
+        <div class="pop-lang-flags effect-waves waves-blue" *ngFor="let language of languageService.languages" (click)="languageService.changeLearning(language)">
+          <img width="20" [src]="language.flag" />
+          <span>{{language.name}}</span>
         </div>
     </div>
   </div>
   <div class="topnav-right">
     <div class="top-nav-item">
-      <i class="fa cursor-pointer hover-shiny fa-microphone" ng-class="{'fa-microphone':!$root.mute, 'fa-microphone-slash':$root.mute}" ng-click="$root.toggleMute()"></i>
+      <i class="fa cursor-pointer hover-shiny fa-microphone" [ngClass]="{'fa-microphone':!speechService.mute, 'fa-microphone-slash':speechService.mute}" (click)="speechService.toggleMute()"></i>
     </div>
     <div class="top-nav-separator hide-on-mobile">
         &nbsp;
@@ -126,6 +126,7 @@
   </div> 
 </section>
 <div style="margin-top:70px">
-  <input #name type="text" [(value)]="language.name" (keyup)="ss.changeName(name.value)">
+  <input #name type="text" [(value)]="languagex.name" (keyup)="ss.changeName(name.value)">
 </div>
-{{language.name}}
+{{languagex.name}}
+{{languageService.languages|json}}

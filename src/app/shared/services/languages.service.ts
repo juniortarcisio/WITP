@@ -35,6 +35,12 @@ export class LanguagesService {
     this.from = this.languages[id];
     this.fromSource.next(this.from);
   }
+
+  swapLanguages () {
+    var aux = this.from;
+    this.from = this.learning;
+    this.learning = aux;
+  }
   
   languages : Array<Language> = [
     {
