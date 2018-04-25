@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { PageFooterComponent } from './structure/page-footer/page-footer.component';
 import { PageHeaderComponent } from './structure/page-header/page-header.component';
 import { PageMenuComponent } from './structure/page-menu/page-menu.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PageMenuComponent } from './structure/page-menu/page-menu.component';
     PageMenuComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
