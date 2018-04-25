@@ -21,7 +21,7 @@
   </div>
   <div class="top-nav-item top-nav-flags">
     <i class="fa fa-retweet cursor-pointer" title="Invert languages"></i>
-    <div class="lang-help">
+    <div [hidden]="true" class="lang-help">
         <i class="fa fa-arrow-up"></i>
         <span>Choose your language settings here</span>
     </div>
@@ -41,7 +41,7 @@
   </div>
   <div class="topnav-right">
     <div class="top-nav-item">
-        <i class="fa cursor-pointer hover-shiny"></i>
+      <i class="fa cursor-pointer hover-shiny fa-microphone" ng-class="{'fa-microphone':!$root.mute, 'fa-microphone-slash':$root.mute}" ng-click="$root.toggleMute()"></i>
     </div>
     <div class="top-nav-separator hide-on-mobile">
         &nbsp;
@@ -55,7 +55,7 @@
                 <a class="text-bold text-white nounderline hover-shiny" href="#!Account/SignUp">Sign Up</a>
             </div>
         </div>
-        <div>
+        <div [hidden]="true">
             <div></div>
             <div class="right">
                 <a class="text-bold text-white nounderline hover-shiny" href="#!Account">Manage</a>
@@ -66,7 +66,7 @@
     </div>
     <div class="top-nav-item"  click-anywhere-but-here="$root.showMobUser = false" is-active="$root.showMobUser">
         <i class="fa fa-user-circle cursor-pointer hover-shiny"></i>
-        <div class="card pop-mob-user grow-down-right">
+        <div [hidden]="true" class="card pop-mob-user grow-down-right">
             <div class="gb_rb"></div>
             <div class="gb_qb"></div>
             <article>
@@ -84,7 +84,7 @@
         &nbsp;
     </div>
     <div class="top-nav-item hide-on-mobile">
-        <div>
+        <div [hidden]="true">
             <div></div>
             <div class="text-gray">
                 <a class="text-bold text-white nounderline hover-shiny" href="#!Construction">Server</a>
@@ -100,7 +100,7 @@
     </div>
     <div class="top-nav-item" click-anywhere-but-here="$root.showMobServer = false" is-active="$root.showMobServer">
         <i class="fa fa-globe cursor-pointer hover-shiny"></i>
-        <div class="card pop-mob-server grow-down-right">
+        <div [hidden]="true" class="card pop-mob-server grow-down-right">
             <div class="gb_rb"></div>
             <div class="gb_qb"></div>
             <article>
