@@ -30,4 +30,13 @@ export class PageHeaderComponent implements OnInit {
 
   selectedTypeValue : any;
 
+  fields :Array<any> = [
+
+  ];
+
+  addField = function() {
+    this.fields.push({
+      name : '', type : 0
+    });
+  }
 }

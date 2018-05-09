@@ -154,4 +154,40 @@
             {{selectedTypeValue}}
         </div>
     </div>
+    <div class="row" *ngFor="let field of fields">
+        <div class="col l3">
+            <input [(ngModel)]="field.name" type="text">
+        </div>
+        <div class="col l3">
+            <select [(ngModel)]="field.type">
+                <option *ngFor="let type of types" [value]="type.id">{{type.name}}</option>
+            </select>
+        </div>        
+    </div>
+    <div class="row">
+        <button class="btn" (click)="addField()">add field</button>
+    </div>
+    <div class="row" *ngFor="let field of fields">
+        <div class="col l3" [ngSwitch]="field.type">
+            <div *ngSwitchCase="0">
+                <label>{{field.name}}</label>
+                <input type="number" pattern="\d*">
+            </div>
+            <div *ngSwitchCase="1">
+                <label>{{field.name}}</label>
+                <input type="text">
+            </div>
+            <div *ngSwitchCase="2">
+                <label>{{field.name}}</label>
+                <input type="date">
+            </div>
+            <div *ngSwitchCase="3">
+                <label>{{field.name}}</label>
+                <input type="number" step="0.01">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        {{fields|json}}
+    </div>
 </section>
