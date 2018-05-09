@@ -1,5 +1,7 @@
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { PageFooterComponent } from './structure/page-footer/page-footer.component';
@@ -15,7 +17,9 @@ import { SharedModule } from './shared/shared.module';
     PageMenuComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
+    CommonModule,
     SharedModule
   ],
   providers: [],

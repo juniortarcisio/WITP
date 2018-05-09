@@ -125,8 +125,33 @@
     </div>
   </div> 
 </section>
-<div style="margin-top:70px">
-  <input #name type="text" [(value)]="languagex.name" (keyup)="ss.changeName(name.value)">
-</div>
-{{languagex.name}}
-{{languageService.languages|json}}
+<section class="container-short">
+    <div style="margin-top:70px">
+        <input #name type="text" [(value)]="ss.learning.name" (keyup)="ss.changeName(name.value)">
+        {{ss.learning.name}}
+    </div>
+    <div class="row">
+        <div class="col l2">
+            <select [(ngModel)]="selectedType">
+                <option *ngFor="let type of types" [value]="type.id">{{type.name}}</option>
+            </select>
+        </div>
+        <div class="col l2" [ngSwitch]="selectedType">
+            <div *ngSwitchCase="0">
+                <input [(ngModel)]="selectedTypeValue" type="number" pattern="\d*">
+            </div>
+            <div *ngSwitchCase="1">
+                <input [(ngModel)]="selectedTypeValue" type="text">
+            </div>
+            <div *ngSwitchCase="2">
+                <input [(ngModel)]="selectedTypeValue" type="date">
+            </div>
+            <div *ngSwitchCase="3">
+                <input [(ngModel)]="selectedTypeValue" type="number" step="0.01">
+            </div>
+        </div>
+        <div class="col l2">
+            {{selectedTypeValue}}
+        </div>
+    </div>
+</section>

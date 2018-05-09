@@ -10,8 +10,6 @@ import { SpeechService } from '../../shared/services/speech.service';
 })
 export class PageHeaderComponent implements OnInit {
 
-  languagex:any;
-
   constructor(
     private ss:SessionService, 
     private languageService:LanguagesService,
@@ -19,7 +17,17 @@ export class PageHeaderComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.ss.currentLanguage.subscribe(language => this.languagex = language)
   }
+
+  types = [
+    { id : 0, name: 'number'},
+    { id : 1, name: 'string'},
+    { id : 2, name: 'date'},
+    { id : 3, name: 'decimal'}
+  ];
+
+  selectedType = 0;
+
+  selectedTypeValue : any;
 
 }

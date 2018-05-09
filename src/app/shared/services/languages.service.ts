@@ -5,11 +5,11 @@ import { Language } from '../entities/language';
 @Injectable()
 export class LanguagesService {
 
-  private learningSource = new BehaviorSubject<Language>(this.learning);
-  currentLearning = this.learningSource.asObservable();
+  //private learningSource = new BehaviorSubject<Language>(this.learning);
+  //currentLearning = this.learningSource.asObservable();
 
-  private fromSource = new BehaviorSubject<Language>(this.from);
-  fromLearning = this.fromSource.asObservable();
+  //private fromSource = new BehaviorSubject<Language>(this.from);
+  //fromLearning = this.fromSource.asObservable();
 
   constructor(private learning:Language, private from:Language) { 
     this.learning = this.languages[1];
@@ -18,22 +18,22 @@ export class LanguagesService {
 
   changeLearning (language:Language) {
     this.learning = language;
-    this.learningSource.next(this.learning);
+    //this.learningSource.next(this.learning);
   }
 
   changeLearningById (id:number) {
     this.learning = this.languages[id];
-    this.learningSource.next(this.learning);
+    //this.learningSource.next(this.learning);
   }
 
   changeFrom (language:Language) {
     this.from = language;
-    this.fromSource.next(this.from);
+    //this.fromSource.next(this.from);
   }
 
   changeFromById (id:number) {
     this.from = this.languages[id];
-    this.fromSource.next(this.from);
+    //this.fromSource.next(this.from);
   }
 
   swapLanguages () {
