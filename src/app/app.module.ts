@@ -1,3 +1,5 @@
+import { GeneralModule } from './general/general.module';
+import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -17,10 +19,12 @@ import { SharedModule } from './shared/shared.module';
     PageMenuComponent
   ],
   imports: [
+    AppRoutingModule,
     FormsModule,
     BrowserModule,
     CommonModule,
-    SharedModule
+    SharedModule,
+    GeneralModule
   ],
   providers: [],
   bootstrap: [AppComponent]
