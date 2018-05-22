@@ -1,3 +1,57 @@
-<p>
-  page-footer works!
-</p>
+<footer class="container row">
+    <div class="col m1 hide-on-mobile">&nbsp;</div>
+    <div class="col m3 s4">
+        <ul class="nopadding">
+            <li>
+                <span class="page-footer-subtitle">Language</span>
+            </li>
+            <li>
+                <a class="nowrap cursor-pointer" ng-click="selectLanguageFrom(0)">
+                    <img width="22" [src]="languageService.languages[0].flag" alt="English" title="English">
+                    <span>English</span>
+                </a>
+            </li>
+            <li>
+                <a class="nowrap cursor-pointer" ng-click="selectLanguageFrom(1)">
+                    <img width="22" [src]="languageService.languages[1].flag" alt="Portugues" title="Portugues">
+                    <span>Português</span>
+                </a>
+            </li>
+            <li>
+                <a class="nowrap cursor-pointer" ng-click="selectLanguageFrom(2)">
+                    <img width="22" [src]="languageService.languages[2].flag" alt="Indonesian" title="Indonesian">
+                    <span>Bahasa</span><span class="hide-on-mobile"> Indonesia</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="col m1 hide-on-mobile">&nbsp;</div>
+    <div class="col m3 s4">
+        <ul class="nopadding">
+            <li>
+                <span class="page-footer-subtitle">About us</span>
+            </li>
+            <li><a class="nowrap" href="#!General/About"><i class="fa fa-footer fa-address-card"></i> Dev Team</a></li>
+            <li><a class="nowrap" href="#!Construction"><i class="fa fa-footer fa-money"></i> Donate</a></li>
+            <li><a class="nowrap" ng-href="#!General/Home#legal"><i class="fa fa-footer fa-gavel"></i> Legal</a></li>
+        </ul>
+    </div>
+    <div class="col m1 hide-on-mobile">&nbsp;</div>
+    <div class="col m3 s4">
+        <ul class="nopadding">
+            <li>
+                <span class="page-footer-subtitle">Social</span>
+            </li>
+            <li><a class="nowrap" href="#!Construction"><i class="fa fa-footer fa-github"></i> Github</a></li>
+            <li><a class="nowrap" href="#!Construction"><i class="fa fa-footer fa-twitter"></i> Twitter</a></li>
+            <li><a class="nowrap" href="#!Construction"><i class="fa fa-footer fa-linkedin"></i> LinkedIn</a></li>
+            <li><a class="nowrap" href="#!Construction"><i class="fa fa-footer fa-facebook"></i> Facebook</a></li>
+        </ul>
+    </div>
+    <br class="clear" />
+    <section class="page-footer-tarkcss">
+        <div class="container">
+            <a class="nounderline text-gray" href="https://github.com/juniortarcisio/TarkCss/" target="_blank">Powered by TarkCss v0.0.0.1A</a>
+        </div>
+    </section>
+</footer>

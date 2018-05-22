@@ -1,0 +1,41 @@
+footer {
+    background-color:#111;
+    color:#aaa;
+    margin-top:10px;
+}
+
+footer ul {
+    list-style:none;
+}
+
+footer ul li {
+    list-style:none;
+    padding:6px;
+}
+
+footer ul li a {
+    color:#aaa;
+    text-decoration:none;
+}
+
+.page-footer-subtitle {
+    color:#5f9e7f;
+    font-weight:bold;
+}
+
+.page-footer-tarkcss {
+    margin-top:25px;
+    background-color: #262626;
+    color:#ccc;
+    padding: 8px 20px;
+    font-size: 0.9em;
+}
+    
+.fa-footer {
+    padding: 2px 5px;
+    border-radius: 3px;
+    width: 26px;
+    box-sizing: border-box;
+    text-align: center;
+}
+footer .container { padding-left: 5px;}

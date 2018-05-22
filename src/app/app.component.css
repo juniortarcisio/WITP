@@ -1,0 +1,27 @@
+.below-top-nav {
+    display:flex;
+	position:absolute;
+	left:250px;
+	right:0;
+	top:54px;
+	bottom:0;
+}
+
+main {
+    z-index:0;
+    position:relative;
+	box-sizing:border-box;
+	overflow-y:auto;
+    overflow-x:hidden;
+	display:flex;
+	flex-direction:column;
+	flex:auto;
+    will-change: scroll-position;
+    /*background-image:url('../Images/bgx.png');*/
+}
+
+.view-container {
+    padding: 10px 20px;
+    flex: 1 0 auto;
+    animation: fade-in .5s;
+}

@@ -418,14 +418,6 @@ body {
     color:#333;
 }
 
-.below-top-nav {
-    display:flex;
-	position:absolute;
-	left:250px;
-	right:0;
-	top:54px;
-	bottom:0;
-}
 
 h1,h2,h3,h4,h5,h6  {
 line-height:1;
@@ -477,20 +469,6 @@ main>section {
         margin-top:0px;
     }
 }
-
-main {
-    z-index:0;
-    position:relative;
-	box-sizing:border-box;
-	overflow-y:auto;
-    overflow-x:hidden;
-	display:flex;
-	flex-direction:column;
-	flex:auto;
-    will-change: scroll-position;
-    /*background-image:url('../Images/bgx.png');*/
-}
-
 main.bgmtx {
     /*background-image:url('../Images/bgxmtx.png');*/
     animation: bgmovedown;
