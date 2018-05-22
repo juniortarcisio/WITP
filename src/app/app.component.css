@@ -20,7 +20,7 @@ main {
     background-image:url('../assets/images/bgx.png');
 }
 
-.view-container {
+.router-container {
     padding: 10px 20px;
     flex: 1 0 auto;
     animation: fade-in .5s;

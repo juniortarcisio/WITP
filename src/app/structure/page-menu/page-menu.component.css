@@ -71,7 +71,7 @@
     margin-bottom:25px;
 }
 
-.sidenav a.active { color: #7dffd6; border-left: 3px solid #7dffd6; }
+.sidenav a.active { color: #7dffd6 !important; border-left: 3px solid #7dffd6; }
 
 .sidenav .social a {
     display:block;

@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { DonateComponent } from './donate/donate.component';
 import { HomeComponent } from './home/home.component';
 import { LegalComponent } from './legal/legal.component';
+import { ConstructionComponent } from './construction/construction.component';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { LegalComponent } from './legal/legal.component';
     AboutComponent,
     DonateComponent,
     HomeComponent,
-    LegalComponent
+    LegalComponent,
+    ConstructionComponent
   ]
 })
 export class GeneralModule { }

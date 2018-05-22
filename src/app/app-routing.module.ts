@@ -1,6 +1,7 @@
 import { HomeComponent } from './general/home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ConstructionComponent } from './general/construction/construction.component';
 
 const routes: Routes = [
   //{ path: 'hero/:id',      component: HeroDetailComponent },
@@ -15,7 +16,7 @@ const routes: Routes = [
   //},
   //{ path: 'another', component: AnotherPageComponent },  
   //{ path: 'dynamic', component: DynamicFormComponent },
-  { path: '**', component: HomeComponent }  
+  { path: '**', component: ConstructionComponent }  
 ];
 
 @NgModule({
