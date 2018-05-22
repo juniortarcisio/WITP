@@ -1,0 +1,10 @@
+<div class="breadcrumb">
+    <span *ngFor="let breadcrumb of breadcrumbs; let last = last">
+        <a>
+            <span>{{breadcrumb.name}}</span>
+        </a>
+        <a [hidden]="last">
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </span>
+</div>

@@ -1239,24 +1239,6 @@ b {
 }
 
 
-.breadcrumb {
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
-.breadcrumb a {
-    clear:both;
-    text-decoration:none !important;
-    padding:5px;
-    font-size: 18px;
-    color: #4f9888;
-    font-weight:bold;
-}
-
-@media only screen and (max-width:650px) {
-    .breadcrumb a { font-size: 1em; }
-}
-
 .popup-mob 
 {
     background-color: rgba(0,0,0,0.4);

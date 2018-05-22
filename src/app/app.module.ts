@@ -10,13 +10,15 @@ import { PageFooterComponent } from './structure/page-footer/page-footer.compone
 import { PageHeaderComponent } from './structure/page-header/page-header.component';
 import { PageMenuComponent } from './structure/page-menu/page-menu.component';
 import { SharedModule } from './shared/shared.module';
+import { BreadcrumbComponent } from './structure/breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageFooterComponent,
     PageHeaderComponent,
-    PageMenuComponent
+    PageMenuComponent,
+    BreadcrumbComponent
   ],
   imports: [
     AppRoutingModule,
