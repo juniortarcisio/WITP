@@ -470,7 +470,7 @@ main>section {
     }
 }
 main.bgmtx {
-    /*background-image:url('../Images/bgxmtx.png');*/
+    background-image:url('./assets/images/bgxmtx.png');
     animation: bgmovedown;
     animation-duration:5s;
     animation-direction:normal;
@@ -479,7 +479,7 @@ main.bgmtx {
 }
 
 main.bgstr {
-    /*background-image:url('../Images/bgxstr.png');*/
+    background-image:url('./assets/images/bgxstr.png');
     animation: bgmovehorizontal;
     animation-duration:20s;
     animation-direction:normal;

@@ -17,7 +17,7 @@ main {
 	flex-direction:column;
 	flex:auto;
     will-change: scroll-position;
-    /*background-image:url('../Images/bgx.png');*/
+    background-image:url('../assets/images/bgx.png');
 }
 
 .view-container {
