@@ -15,7 +15,7 @@ const routes: Routes = [
   //  pathMatch: 'full'
   //},
   //{ path: 'another', component: AnotherPageComponent },  
-  //{ path: 'dynamic', component: DynamicFormComponent },
+  { path: 'General/Home', component: HomeComponent },
   { path: '**', component: ConstructionComponent }  
 ];
 
