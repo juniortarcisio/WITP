@@ -122,7 +122,6 @@
 }
 
 .itens { overflow:hidden}
-.menu-group.closed .itens { display: none; }
 .menu-group .fa-chevron-up { transition:.5s; }
 .menu-group .fa-chevron-up.closed { transform:rotateX(180deg); }
 

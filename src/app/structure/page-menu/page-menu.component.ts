@@ -1,10 +1,12 @@
 import { LanguagesService } from './../../shared/services/languages.service';
 import { Component, OnInit } from '@angular/core';
+import { slideDownThenUp } from '../../shared/factories/animations-factory';
 
 @Component({
   selector: 'page-menu',
   templateUrl: './page-menu.component.html',
-  styleUrls: ['./page-menu.component.css']
+  styleUrls: ['./page-menu.component.css'],
+  animations: [slideDownThenUp()]
 })
 export class PageMenuComponent implements OnInit {
 
