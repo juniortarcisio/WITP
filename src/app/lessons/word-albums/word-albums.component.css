@@ -1,0 +1,42 @@
+.textmark {
+    margin-left:5px;
+    cursor: pointer;
+}
+
+.progress {
+    position: absolute;
+    top:15px;
+    right:20px;
+    width:200px;
+    text-align: right;    
+}
+
+.progressbar {
+    position: relative;
+    display: block;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    width: calc(100% - 100px);
+    max-width: 350px;
+    height: 20px;
+    margin: 5px 0px;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.3), 0px -1px 1px rgba(0,0,0,0.3), 0px 4px 5px rgba(0,0,0,0.12);
+    background: linear-gradient(to right, rgb(235, 235, 235) 0%,rgb(235, 235, 235) 100%);
+}
+
+.progressbar > span {
+    position: absolute;
+    top: -4px;
+    width: 110px;
+    right: -100px;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.btn-small {
+    font-size: 13px;
+    padding: 5px 15px;
+    width: 49%;
+    margin-top: 15px;
+    box-sizing: border-box
+}

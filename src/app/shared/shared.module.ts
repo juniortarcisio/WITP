@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Language } from './entities/language';
 import { SpeechService } from './services/speech.service';
+import { VocabularyService } from './services/vocabulary.service';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { SpeechService } from './services/speech.service';
   providers : [
     LanguagesService,
     Language,
-    SpeechService
+    SpeechService,
+    VocabularyService
   ]
 })
 export class SharedModule { }

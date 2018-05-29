@@ -1,3 +1,4 @@
+import { LessonsModule } from './lessons/lessons.module';
 import { GeneralModule } from './general/general.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
@@ -29,6 +30,7 @@ import { BreadcrumbComponent } from './structure/breadcrumb/breadcrumb.component
     CommonModule,
     SharedModule,
     GeneralModule,
+    LessonsModule,
     BrowserAnimationsModule
   ],
   providers: [],

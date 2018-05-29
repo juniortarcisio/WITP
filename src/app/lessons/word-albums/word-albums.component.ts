@@ -1,3 +1,4 @@
+import { VocabularyService } from './../../shared/services/vocabulary.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WordAlbumsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _vocabularyService : VocabularyService) { }
 
   ngOnInit() {
   }

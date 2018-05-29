@@ -2,6 +2,7 @@ import { HomeComponent } from './general/home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ConstructionComponent } from './general/construction/construction.component';
+import { WordAlbumsComponent } from './lessons/word-albums/word-albums.component';
 
 const routes: Routes = [
   //{ path: 'hero/:id',      component: HeroDetailComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   //  pathMatch: 'full'
   //},
   //{ path: 'another', component: AnotherPageComponent },  
+  { path: 'Vocabulary/WordAlbums', component: WordAlbumsComponent },
   { path: 'General/Home', component: HomeComponent },
   { path: '**', component: ConstructionComponent }  
 ];

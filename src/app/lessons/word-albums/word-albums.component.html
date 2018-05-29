@@ -1,3 +1,16 @@
-<p>
-  word-albums works!
-</p>
+<section class="container-short">
+  <h1>Word Albums</h1>
+  <h3>Albums that contains contexted words and expressions</h3>
+  <article class="card l12 slide-down animate-duration-x1" *ngFor="let album of _vocabularyService.getWordAlbums()">
+      <div class="card-container relative">
+        <h2><i class="fa fa-bullseye" [ngClass]="album.icon"></i> {{album.name}}</h2>
+        <p>Album description and a brief introduction of it's content</p>
+        <span class="textmark singular" *ngFor="let deck of album.decks">{{deck.name}}</span>
+        <div class="progress">
+            <div class="progressbar"><span >0% mastered</span></div>
+            <button class="btn btn-small">Details</button>
+            <button class="btn btn-small">Practice</button>
+        </div>
+      </div>
+  </article>
+</section>
