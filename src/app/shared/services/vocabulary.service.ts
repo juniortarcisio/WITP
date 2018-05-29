@@ -617,7 +617,7 @@ export class VocabularyService {
     },
     {
         id: 6,
-        name: "General Adjectives", icon: "fa-leaf",
+        name: "General Adjectives", icon: "fa-eye",
         decks: [
             {
                 id: 0,
