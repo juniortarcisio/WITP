@@ -18,4 +18,9 @@ export class WordAlbumsComponent implements OnInit {
     const routename = album.name.replace(' ','').replace(' ','').replace('&','');
     return '/Vocabulary/WordAlbums/' + routename;
   }
+
+  getAnimationDuration(i:number) {
+    i++;
+    return "animate-duration-x" + i.toString();
+  }
 }

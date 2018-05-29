@@ -1,7 +1,7 @@
 <section class="container-short">
   <h1>Word Albums</h1>
   <h3>Albums that contains contexted words and expressions</h3>
-  <article class="card l12 slide-down animate-duration-x1" *ngFor="let album of _vocabularyService.getWordAlbums()">
+  <article class="card l12 slide-down" [ngClass]="getAnimationDuration(i)" *ngFor="let album of _vocabularyService.getWordAlbums();let i = index">
       <div class="card-container relative">
         <h2><i class="fa" [ngClass]="album.icon"></i> {{album.name}}</h2>
         <p>Album description and a brief introduction of it's content</p>

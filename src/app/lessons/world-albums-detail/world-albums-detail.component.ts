@@ -22,4 +22,9 @@ export class WorldAlbumsDetailComponent implements OnInit {
     });
     console.log(this.album);
   }
+
+  getAnimationDuration(i:number) {
+    i++;
+    return "animate-duration-x" + i.toString();
+  }
 }
