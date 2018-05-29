@@ -1,3 +1,20 @@
-<p>
-  world-albums-detail works!
-</p>
+<section class="container-short">
+  <h1>{{album.name}}</h1>
+  <h3>This album contain decks with specific contexted words and expressions</h3>
+  <article class="card l12 slide-down animate-duration-x1" *ngFor="let deck of album.decks">
+      <div class="card-container relative">
+        <h2><i class="fa fa-bullseye"></i> {{deck.name}}</h2>
+        <p>Deck description and a brief introduction of it's content</p>
+        <div class="progress">
+            <div class="progressbar"><span >0% mastered</span></div>
+        </div>
+        <div class="album-buttons">
+            <i class="fa fa-edit" title="practice"></i>
+            <a> <!--[routerLink]="getRouteName(deck)"-->
+                <i class="fa fa-arrow-circle-right" title="details"></i>
+            </a>
+        </div>
+      </div>
+  </article>
+</section>
+

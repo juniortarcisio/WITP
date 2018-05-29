@@ -1,6 +1,6 @@
 <div class="breadcrumb">
     <span *ngFor="let breadcrumb of breadcrumbs; let last = last">
-        <a>
+        <a [routerLink]="breadcrumb.link">
             <span>{{breadcrumb.name}}</span>
         </a>
         <a [hidden]="last">
