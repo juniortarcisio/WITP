@@ -1128,6 +1128,10 @@ b {
 .animate-duration-x4 { animation-duration:1.2s !important; }
 .animate-duration-x5 { animation-duration:1.5s !important; }
 .animate-duration-x6 { animation-duration:1.8s !important; }
+.animate-duration-x7 { animation-duration:2.1s !important; }
+.animate-duration-x8 { animation-duration:2.4s !important; }
+.animate-duration-x9 { animation-duration:2.7s !important; }
+.animate-duration-x10 { animation-duration:3s !important; }
 
 @keyframes fade-in {
     from { opacity: 0; }
