@@ -1,0 +1,19 @@
+<section class="container-short">
+  <h1>{{deck.name}}</h1>
+  <h3>This decks contains specific contexted words and expressions</h3>
+  <ng-container *ngFor="let word of deck.words; let i = index">
+      <article class="card l12 slide-down" [ngClass]="getAnimationDuration(i)" *ngIf="!word.show || word.show[_languageService.from.id]">
+          <div class="card-container relative">
+            <div>
+              <b>{{word.lang[_languageService.from.id]}}</b>
+              <span *ngIf="word.obs && word.obs[_languageService.from.id]">({{word.obs[_languageService.from.id]}})</span>
+            </div>
+            <div *ngIf="false">
+                <b>{{word.lang[_languageService.learning.id]}}</b>
+                <span *ngIf="word.obs && word.obs[_languageService.learning.id]">({{word.obs[_languageService.learning.id]}})</span>
+            </div>
+          </div>
+      </article>
+  </ng-container>
+</section>
+

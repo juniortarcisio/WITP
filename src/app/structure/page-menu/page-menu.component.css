@@ -43,6 +43,7 @@
     font-size: 25px;
     color: #adadad;
     display: block;
+    transition: .3s;
 }
 
 .sidenav .groups a:hover { background-color:#333; }

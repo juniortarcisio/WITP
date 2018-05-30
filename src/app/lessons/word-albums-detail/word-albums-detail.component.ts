@@ -4,13 +4,15 @@ import { Component, OnInit } from '@angular/core';
 import { VocabularyService } from '../../shared/services/vocabulary.service';
 
 @Component({
-  selector: 'app-world-albums-detail',
-  templateUrl: './world-albums-detail.component.html',
-  styleUrls: ['./world-albums-detail.component.css']
+  selector: 'app-word-albums-detail',
+  templateUrl: './word-albums-detail.component.html',
+  styleUrls: ['./word-albums-detail.component.css']
 })
-export class WorldAlbumsDetailComponent implements OnInit {
+export class WordAlbumsDetailComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private _vocabularyService : VocabularyService) { }
+  constructor(
+    private route: ActivatedRoute, 
+    private _vocabularyService : VocabularyService) { }
 
   private album : any;
 
@@ -20,11 +22,17 @@ export class WorldAlbumsDetailComponent implements OnInit {
       var xAlbum = x.name.replace(' ','').replace(' ','').replace('&','');
       return xAlbum == albumName ;
     });
-    console.log(this.album);
   }
 
   getAnimationDuration(i:number) {
     i++;
     return "animate-duration-x" + i.toString();
   }
+
+  getRouteName(deck:any) {
+    const albumName = this.route.snapshot.params['album'];
+    const routename = deck.name.replace(' ','').replace(' ','').replace('&','');
+    return '/Vocabulary/WordAlbums/' + albumName + '/' + routename;
+  }
+
 }

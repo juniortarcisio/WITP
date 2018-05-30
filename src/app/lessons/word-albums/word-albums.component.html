@@ -4,10 +4,10 @@
   <article class="card l12 slide-down" [ngClass]="getAnimationDuration(i)" *ngFor="let album of _vocabularyService.getWordAlbums();let i = index">
       <div class="card-container relative">
         <h2><i class="fa" [ngClass]="album.icon"></i> {{album.name}}</h2>
-        <p>Album description and a brief introduction of it's content</p>
+        <p>This album contains the following words decks</p>
         <span class="textmark singular" *ngFor="let deck of album.decks">{{deck.name}}</span>
         <div class="progress">
-            <div class="progressbar"><span >0% mastered</span></div>
+            0% mastered
         </div>
         <div class="album-buttons">
             <i class="fa fa-edit" title="practice"></i>

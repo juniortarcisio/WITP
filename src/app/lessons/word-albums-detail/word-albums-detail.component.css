@@ -9,6 +9,8 @@
     right:20px;
     width:200px;
     text-align: right;    
+    font-weight: bold;
+    color: #a7d0bf;
 }
 
 .progressbar {

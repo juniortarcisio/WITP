@@ -7,7 +7,7 @@
                   <i class="fa fa-chevron-up" [ngClass]="{'closed':group.closed}"></i>
               </h1>
               <div class="itens" *ngIf="!group.closed" [@slideDownThenUp]="'in'">
-                  <a *ngFor="let item of group.items" [routerLink]="item.href" routerLinkActive="active" [ngClass]="{'small effect-waves waves-aqua':true, 'active': false}">
+                  <a *ngFor="let item of group.items" [routerLink]="item.href" routerLinkActive="active" [ngClass]="{'small':true, 'active': false}">
                       <i class="fa" [ngClass]="item.icon"></i> {{item.name[languageService.from.id]}}
                   </a>
               </div>
