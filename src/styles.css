@@ -1131,7 +1131,12 @@ b {
 .animate-duration-x7 { animation-duration:2.1s !important; }
 .animate-duration-x8 { animation-duration:2.4s !important; }
 .animate-duration-x9 { animation-duration:2.7s !important; }
-.animate-duration-x10 { animation-duration:3s !important; }
+.animate-duration-x10 { animation-duration:3.3s !important; }
+.animate-duration-x11 { animation-duration:3.6s !important; }
+.animate-duration-x12 { animation-duration:3.9s !important; }
+.animate-duration-x13 { animation-duration:4.2s !important; }
+.animate-duration-x14 { animation-duration:4.5s !important; }
+.animate-duration-x15 { animation-duration:4.8s !important; }
 
 @keyframes fade-in {
     from { opacity: 0; }

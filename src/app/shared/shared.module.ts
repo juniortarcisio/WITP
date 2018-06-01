@@ -1,3 +1,4 @@
+import { ExpressionService } from './services/expression.service';
 import { LanguagesService } from './services/languages.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -16,7 +17,8 @@ import { VocabularyService } from './services/vocabulary.service';
     LanguagesService,
     Language,
     SpeechService,
-    VocabularyService
+    VocabularyService,
+    ExpressionService
   ]
 })
 export class SharedModule { }

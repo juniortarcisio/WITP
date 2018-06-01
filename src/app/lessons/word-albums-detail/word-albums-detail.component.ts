@@ -26,6 +26,7 @@ export class WordAlbumsDetailComponent implements OnInit {
 
   getAnimationDuration(i:number) {
     i++;
+    if (i>10)i=10;
     return "animate-duration-x" + i.toString();
   }
 

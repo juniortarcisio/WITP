@@ -6,6 +6,7 @@ import { SimilarWordsComponent } from './similar-words/similar-words.component';
 import { WordAlbumsComponent } from './word-albums/word-albums.component';
 import { WordAlbumsDetailComponent } from './word-albums-detail/word-albums-detail.component';
 import { WordDeckComponent } from './word-deck/word-deck.component';
+import { ExpressionAlbumsComponent } from './expression-albums/expression-albums.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { WordDeckComponent } from './word-deck/word-deck.component';
     SimilarWordsComponent,
     WordAlbumsComponent,
     WordAlbumsDetailComponent,
-    WordDeckComponent
+    WordDeckComponent,
+    ExpressionAlbumsComponent
   ]
 })
 export class LessonsModule { }
