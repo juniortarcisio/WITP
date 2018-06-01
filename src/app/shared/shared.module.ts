@@ -1,3 +1,4 @@
+import { RandomUtilsService } from './services/random-utils.service';
 import { ExpressionService } from './services/expression.service';
 import { LanguagesService } from './services/languages.service';
 import { NgModule } from '@angular/core';
@@ -18,7 +19,8 @@ import { VocabularyService } from './services/vocabulary.service';
     Language,
     SpeechService,
     VocabularyService,
-    ExpressionService
+    ExpressionService,
+    RandomUtilsService
   ]
 })
 export class SharedModule { }

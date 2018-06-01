@@ -1,10 +1,11 @@
 <section class="container-short">
   <h1>{{album.name}}</h1>
   <h3>This album contain decks with specific contexted words and expressions</h3>
-  <article class="card l12 slide-down" [ngClass]="getAnimationDuration(i)" *ngFor="let deck of album.decks; let i = index">
+  <article class="card l12 slide-down" [ngClass]="_randomUtilsService.getAnimationDuration(i)" *ngFor="let deck of album.decks; let i = index">
       <div class="card-container relative">
         <h2><i class="fa fa-bullseye"></i> {{deck.name}}</h2>
         <p>Deck description and a brief introduction of it's content</p>
+        <span class="textmark singular">{{deck.words.length}} words</span>
         <div class="progress">
             0% mastered<!--<div class="progressbar"><span ></span></div>-->
         </div>

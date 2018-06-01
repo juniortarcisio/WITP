@@ -7,11 +7,13 @@ import { WordAlbumsComponent } from './word-albums/word-albums.component';
 import { WordAlbumsDetailComponent } from './word-albums-detail/word-albums-detail.component';
 import { WordDeckComponent } from './word-deck/word-deck.component';
 import { ExpressionAlbumsComponent } from './expression-albums/expression-albums.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ],
   declarations: [
     FlashcardsComponent,

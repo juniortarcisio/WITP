@@ -1,3 +1,4 @@
+import { RandomUtilsService } from './../../shared/services/random-utils.service';
 import { VocabularyService } from './../../shared/services/vocabulary.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -9,19 +10,21 @@ import { Router } from '@angular/router';
 })
 export class WordAlbumsComponent implements OnInit {
 
-  constructor(private router: Router, private _vocabularyService : VocabularyService) { }
+  constructor(
+    private router: Router, 
+    private _vocabularyService : VocabularyService,
+    private _randomUtilsService : RandomUtilsService) { }
 
   ngOnInit() {
   }
 
-  getRouteName(album:any) {
-    const routename = album.name.replace(' ','').replace(' ','').replace('&','');
-    return '/Vocabulary/WordAlbums/' + routename;
-  }
-
-  getAnimationDuration(i:number) {
-    i++;
-    if (i>10)i=10;
-    return "animate-duration-x" + i.toString();
+  getTotalWordsCount() {
+    var sum = 0;
+    this._vocabularyService.getWordAlbums().forEach(album => {
+      album.decks.forEach(deck => {
+        sum += deck.words.length;
+      });
+    }); 
+    return sum;
   }
 }

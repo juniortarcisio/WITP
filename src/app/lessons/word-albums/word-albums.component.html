@@ -1,7 +1,7 @@
 <section class="container-short">
   <h1>Word Albums</h1>
-  <h3>Albums that contains contexted words and expressions</h3>
-  <article class="card l12 slide-down" [ngClass]="getAnimationDuration(i)" *ngFor="let album of _vocabularyService.getWordAlbums();let i = index">
+  <h3>Albums that contains contexted words and expressions ({{getTotalWordsCount()}} words)</h3>
+  <article class="card l12 slide-down" [ngClass]="_randomUtilsService.getAnimationDuration(i)" *ngFor="let album of _vocabularyService.getWordAlbums();let i = index">
       <div class="card-container relative">
         <h2><i class="fa" [ngClass]="album.icon"></i> {{album.name}}</h2>
         <p>This album contains the following words decks</p>
@@ -11,7 +11,7 @@
         </div>
         <div class="album-buttons">
             <i class="fa fa-edit" title="practice"></i>
-            <a [routerLink]="getRouteName(album)">
+            <a [routerLink]="'/Vocabulary/WordAlbums/' + _randomUtilsService.cleanRouteName(album.name)">
                 <i class="fa fa-arrow-circle-right" title="details"></i>
             </a>
         </div>

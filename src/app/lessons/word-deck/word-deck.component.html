@@ -1,19 +1,38 @@
 <section class="container-short">
   <h1>{{deck.name}}</h1>
   <h3>This decks contains specific contexted words and expressions</h3>
-  <ng-container *ngFor="let word of deck.words; let i = index">
-      <article class="card l12 slide-down" [ngClass]="getAnimationDuration(i)" *ngIf="!word.show || word.show[_languageService.from.id]">
-          <div class="card-container relative">
-            <div>
-              <b>{{word.lang[_languageService.from.id]}}</b>
-              <span *ngIf="word.obs && word.obs[_languageService.from.id]">({{word.obs[_languageService.from.id]}})</span>
+  <div class="card l12">
+    <div class="card-container relative">
+        <table>
+          <tr>
+            <th width="40%">{{_languageService.from.name}}</th>
+            <th>{{_languageService.learning.name}}</th>
+          </tr>
+          <ng-container *ngFor="let word of deck.words; let i = index">
+            <tr *ngIf="!word.show || word.show[_languageService.from.id]">
+              <td>
+                <b>{{word.lang[_languageService.from.id]}}</b>
+                <span class="obs" *ngIf="word.obs && word.obs[_languageService.from.id]">({{word.obs[_languageService.from.id]}})</span>
+              </td>
+              <td>
+                {{word.lang[_languageService.learning.id]}}
+                <span class="obs" *ngIf="word.obs && word.obs[_languageService.learning.id]">({{word.obs[_languageService.learning.id]}})</span>
+              </td>
+            </tr>
+          </ng-container>
+        </table>
+    </div>
+  </div>
+        <!--
+        <article class="card l12 slide-down" [ngClass]="getAnimationDuration(i)" *ngIf="!word.show || word.show[_languageService.from.id]">
+            <div class="card-container relative">
+              <div>
+              </div>
+              <div>
+                  <b>{{word.lang[_languageService.learning.id]}}</b>
+                  <span *ngIf="word.obs && word.obs[_languageService.learning.id]">({{word.obs[_languageService.learning.id]}})</span>
+              </div>
             </div>
-            <div *ngIf="false">
-                <b>{{word.lang[_languageService.learning.id]}}</b>
-                <span *ngIf="word.obs && word.obs[_languageService.learning.id]">({{word.obs[_languageService.learning.id]}})</span>
-            </div>
-          </div>
-      </article>
-  </ng-container>
+        </article>-->
 </section>
 
